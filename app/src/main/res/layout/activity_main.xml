@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8f9"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        app:srcCompat="@drawable/top_bg"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/text_image"
+        android:layout_width="@dimen/_30mdp"
+        android:layout_height="@dimen/_30mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:srcCompat="@drawable/text"
+        app:layout_constraintEnd_toStartOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="@id/top_bg"
+        tools:ignore="ContentDescription" />
+
+    <!--    <TextView
+            android:id="@+id/bg_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_text"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toStartOf="@id/text_image"
+            app:layout_constraintEnd_toEndOf="@id/text_image"
+            android:layout_marginBottom="@dimen/_5mdp"
+            app:layout_constraintBottom_toBottomOf="@id/top_bg" />-->
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_50mdp"
+        android:layout_height="@dimen/_50mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/translation"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/clear"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logo"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:srcCompat="@drawable/clear"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,KeyboardInaccessibleWidget,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_20mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- <ImageView
+                 android:id="@+id/clear_edit"
+                 android:layout_width="@dimen/_25mdp"
+                 android:layout_height="@dimen/_25mdp"
+                 android:src="@drawable/et_clear"
+                 android:layout_gravity="end"
+                 android:layout_marginEnd="@dimen/_20mdp"
+                 android:layout_marginTop="@dimen/_5mdp"
+                 tools:ignore="ContentDescription,RtlCompat" />-->
+
+
+            <TextView
+                android:id="@+id/etNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:textStyle="italic"
+                android:textColor="@color/red" />
+
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_text_to_translate"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:maxLines="5"
+                android:textSize="@dimen/_20font_mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:textColor="#00BCD4"
+                android:padding="@dimen/_5mdp"
+                android:keyboardNavigationCluster="true"
+                android:textCursorDrawable="@color/black"
+                android:gravity="top|start"
+                tools:ignore="Autofill,UnusedAttribute" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_20mdp"
+                tools:ignore="RtlCompat">
+
+
+                <ImageView
+                    android:id="@+id/et_mic"
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_25mdp"
+                    android:layout_marginLeft="@dimen/_15mdp"
+                    android:layout_marginRight="@dimen/_15mdp"
+                    android:layout_marginBottom="@dimen/_80mdp"
+                    android:src="@drawable/speck"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/et_copy"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+
+                <ImageView
+                    android:id="@+id/et_copy"
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_25mdp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/copy_all"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn"
+                android:layout_width="@dimen/_150mdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:background="@drawable/btn_bg"
+                android:text="@string/app_name"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn2"
+                android:layout_width="@dimen/_150mdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:background="@drawable/btn_bg"
+                android:text="@string/app_name"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:textColor="@color/red" />
+
+
+            <TextView
+                android:id="@+id/tView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginBottom="@dimen/_20mdp"
+                android:padding="@dimen/_10mdp"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/_20font_mdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/itemTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_20mdp"
+                tools:ignore="RtlCompat">
+
+
+                <ImageView
+                    android:id="@+id/text_mic"
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_25mdp"
+                    android:layout_marginLeft="@dimen/_15mdp"
+                    android:layout_marginRight="@dimen/_15mdp"
+                    android:layout_marginBottom="@dimen/_80mdp"
+                    android:src="@drawable/speck"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/text_copy"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+
+                <ImageView
+                    android:id="@+id/text_copy"
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_25mdp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/copy_all"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_10mdp">
+
+
+             <Spinner
+                 android:id="@+id/spSourceLanguage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="@dimen/_30mdp"
+                 android:background="@drawable/bg"
+                 android:paddingStart="@dimen/_25mdp"
+                 android:paddingEnd="@dimen/_25mdp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 android:layout_marginStart="@dimen/_20mdp"
+                 tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+             <Spinner
+                 android:id="@+id/spTargetLanguage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="@dimen/_30mdp"
+                 android:background="@drawable/bg"
+                 android:paddingStart="@dimen/_25mdp"
+                 android:paddingEnd="@dimen/_25mdp"
+                 android:layout_below="@id/spSourceLanguage"
+                 android:layout_marginBottom="@dimen/_30mdp"
+                 app:layout_constraintTop_toTopOf="@id/spSourceLanguage"
+                 android:layout_marginEnd="@dimen/_20mdp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/spSourceLanguage"
+                 tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

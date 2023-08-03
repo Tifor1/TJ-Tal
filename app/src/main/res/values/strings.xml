@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Translator</string>
+    <string name="enter_your_text">Enter Your Text</string>
+    <string name="image_text">Image Text</string>
+    <string name="edit_text">Edit Text</string>
+    <string name="bangla">Bangla</string>
+    <string name="english">English</string>
+    <string name="text_view">Text View</string>
+    <string name="take_image">TAKE IMAGE</string>
+    <string name="enter_text_to_translate">Enter text to translate...</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "199830006926",
+    "project_id": "translator-2d6eb",
+    "storage_bucket": "translator-2d6eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199830006926:android:651bbe035e2c87e1fdeddf",
+        "android_client_info": {
+          "package_name": "translator.tifor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIUP4e0LUtHYJaiK0oD-eL-p6sPpsTz5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
